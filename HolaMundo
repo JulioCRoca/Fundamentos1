@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string nombre; //declaramos una variable 
+    cout<< "Ingresa tu nombre: ";
+    cin>>nombre; //Pide un nombre
+    cout <<"Hola "<< nombre; //Imprime lo datos 
+    return 0;
+}
