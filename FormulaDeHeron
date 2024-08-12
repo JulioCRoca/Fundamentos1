@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float ladoA,ladoB,ladoC,semiperi,Area;
+    cout<<"Ingrese un valor en centimetros"<<endl; //Pedimos lo datos requeridos
+    cout<<"Ingresa ladoA: ";
+    cin>>ladoA;
+    cout<<"Ingresa ladoB: ";
+    cin>>ladoB;
+    cout<<"Ingresa ladoC: ";
+    cin>>ladoC;
+    semiperi=(ladoA+ladoB+ladoC)/2; //calculamos el semiperimetro
+    Area= sqrt(semiperi*(semiperi-ladoA)*(semiperi-ladoB)*(semiperi-ladoC)); //Calculamos el area total
+    cout<< "El area es: "<<Area;
+    return 0;
+}
