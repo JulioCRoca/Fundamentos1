@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std; 
+
+int main()
+{
+    double a,b,c; 
+    double discriminante;
+
+    cout<<"Ingrese el valor a: "; 
+    cin>>a;
+    if(a > 0){
+        cout<<"Ingrese el valor b: "; 
+        cin>>b;
+        cout<<"Ingrese el valor c: "; 
+        cin>>c;
+        discriminante=pow(b,2)-4*a*c;
+    
+        if(discriminante > 0){
+           double x1=(-b+sqrt(discriminante))/2*a;
+           double x2=(-b-sqrt(discriminante))/2*a;
+            cout<<"Las raices son: "<<x1<<"y "<<x2;
+        }
+        
+        else{
+            if(discriminante==0){
+                double x1=-b/(2.0*a);
+                cout<<"La unica raiz es: "<<x1;
+            }
+            else{
+                double x1=-b/2*a;
+                double x2=sqrt(-discriminante)/(2*a);
+                 cout<<"Las raices imaginarias son"<<x1<<"+"<<x2<<"i"<<endl;
+                 cout<<"Las raices imaginarias son"<<x1<<"-"<<x2<<"i";
+            }
+        }
+      }
+ else{
+     cout << "Es una ecuacion lineal, no se puede calcular";
+ }
+
+}
