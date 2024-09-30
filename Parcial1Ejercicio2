@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    float compra,descuento,montotot;
+
+    cout<<"Ingrese el monto total de la compra: ";
+    cin>>compra;
+
+    if(compra>100){
+        descuento=compra*0.15;
+        montotot=compra-descuento;
+        cout<<"Su monton a pagar con el 15% de descuento es de: "<<montotot<<" bs";
+    }
+
+    else
+        cout<<"Usted no tiene descuento";
+
+
+return 0;
+}
