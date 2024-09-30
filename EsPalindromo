@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-
+//Autor: Julio Cesar 
 using namespace std;
 bool espalindromo(string palabr);
 
