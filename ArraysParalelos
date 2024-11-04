@@ -1,0 +1,57 @@
+
+#include <iostream>
+#include <string>
+
+#define MAX 100
+using namespace std; 
+void cargar(int vec[], string nomb[], int n);
+void mostrar(int vec[], string nomb[], int n);
+void burbuja(int vec[], string nomb[], int n);
+
+int main()
+{
+    int num,vec[MAX],n=0;
+    string nombre[MAX]; 
+    do {
+        cout << "Ingrese el numero de personas a registrar: ";
+        cin >> n;
+    } while (n<0 || n>MAX);
+    cargar(vec,nombre,n);
+    burbuja(vec, nombre, n);
+    mostrar(vec, nombre, n);
+    return 0; 
+}
+void cargar(int vec[], string nomb[], int n) {
+    for (int i = 0; i < n; i++) {
+        cin.ignore();
+        cout << "Ingrese su nombre(Nombre y apellido): ";
+        getline(cin, nomb[i]);
+        cout << "Ingrese su numero de celular";
+        cin >> vec[i];
+    }
+
+}
+void mostrar(int vec[], string nomb[], int n) {
+    cout << "Nombre y Apellidos \t Numeros" << endl;
+    cout << "-------------------------------" << endl; 
+    for (int i = 0; i < n; i++) {
+        cout << nomb[i] << "\t\t" << vec[i] << endl; 
+    }
+}
+void burbuja(int vec[], string nomb[], int n) {
+    string aux;
+    int orden; 
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; i < n; i++) {
+            if (nomb[i] > nomb[j]) {
+                aux = nomb[i];
+                nomb[i] = nomb[j];
+                nomb[j] = aux; 
+                orden = vec[i];
+                vec[i] = vec[j];
+                vec[j] = orden;
+            }
+    
+        }
+    }
+}
