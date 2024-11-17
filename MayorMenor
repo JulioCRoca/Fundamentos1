@@ -1,0 +1,29 @@
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+int main() 
+{
+    int numero, N, suma=0;
+    int mayor = numeric_limits<int>::min();
+    int menor = numeric_limits<int>::max();
+    do 
+    {
+        cout << "Ingrese el numero de elementos: ";
+        cin >>N;
+    } while (N<=0);
+    for (int i=0; i<N;i++) {
+        cout << "Ingrese el número " << (i+1) << ": ";
+        cin >> numero;
+        if (numero>mayor)
+            mayor = numero;
+        if (numero<menor)
+            menor = numero;
+        suma += numero;
+    }
+    cout << "El promedio es: " << static_cast<double>(suma)/N << endl;
+    cout << "El mayor es: " << mayor << endl;
+    cout << "El menor es: " << menor << endl;
+    return 0;
+}
