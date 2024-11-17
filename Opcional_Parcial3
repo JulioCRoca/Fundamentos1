@@ -1,0 +1,39 @@
+//Roca Alba Julio Cesar
+
+#include <iostream>
+#include <math.h>
+
+using namespace std; 
+
+float semiperimetro(float a, float b, float c); 
+void areas(float p, float a, float b, float c, float &s); 
+
+
+int main()
+{
+	float a, b, c, area,p; 
+	do {
+		cout << "Ingrese el 1er lado: ";
+		cin >> a;
+	} while (a <= 0);
+	do {
+		cout << "Ingrese el 2do lado: ";
+		cin >> b;
+	} while (b <= 0);
+	do {
+		cout << "Ingrese el 3er lado: ";
+		cin >> c;
+	}while (a <= 0);
+	p=semiperimetro(a, b, c); 
+	areas(p, a, b, c,area);
+	cout << "El area del triangulo es: " <<area; 
+	
+}
+float semiperimetro(float a, float b, float c) {
+	float semi; 
+	semi = (a + b + c) / 2; 
+	return semi; 
+}
+void areas(float p, float a, float b, float c, float &s) {
+	s = sqrt(p*(p - a)*(p - b)*(p - c)); 
+}
