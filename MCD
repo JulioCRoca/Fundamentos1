@@ -1,0 +1,33 @@
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+int main() {
+    int Numero1, numeros, mcd, r;
+    
+    do {
+        cout << "Ingresa los N números: ";
+        cin >> numeros;
+    } while (numeros <= 0);
+
+    cout << "Ingrese el número 1: ";
+    cin >> Numero1;
+    mcd = Numero1; 
+
+    for (int i = 1; i < numeros; i++) {
+        cout << "Ingrese el número " << i + 1 << " : ";
+        cin >> N;
+        
+        int a = mcd, b = N;
+        while (b != 0) {
+            r=a%b;
+            a=b;
+            b=r;
+        }
+        mcd = a;
+    }
+    cout << "El MCD de los " << cant << " números es: " << mcd << endl;
+
+    return 0;
+}
