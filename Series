@@ -1,0 +1,31 @@
+Ejercicios a presentar: 
+//S = X / 1!+ X ^ 2 / 2!+ X ^ 3 / 3!+ ........X ^ n / n!
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+float serieciclo(int p, float n);
+int main() {
+    unsigned long Factorial = 1;
+    int potencia;
+    float numero;
+    do {
+        cout << "Ingrese  la potencia n para realizar la siguiente serie S= X/1! + X^2/2! + X^3/3! + ........X^n/n!: ";
+        cin >> potencia;
+    } while (potencia < 1);
+    cout << "Ingrese el numero X para realizar la siguiente serie S= X/1! + X^2/2! + X^3/3! + ........X^n/n!: ";
+    cin >> numero;
+    float serieciclo(potencia, numero);
+
+    cout << "El resultado de la serie es: " << serie;
+
+    return 0;
+}
+float serieciclo(int p, float n) {
+    float serie = 0;
+    for (int i = 1;i <= p;i++) {
+        Factorial = Factorial * i;
+        serie = serie + ((pow(n, i)) / (Factorial));
+    }
+    return serie;
+}
